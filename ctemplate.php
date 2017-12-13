@@ -11,7 +11,7 @@
 
 <?php
 if($_GET["c"]==null) die();
-$html1 = file_get_contents("http://192.11.11.1:8080/novalanRP/serv/art/buscar?id=".$_GET["c"]);
+$html1 = file_get_contents("http://127.0.0.1/serv/art/buscar?id=".$_GET["c"]);
 $json1 = json_decode($html1);
 $kArticulo = $json1->kArticulo;
 $luchasReales = $json1->luchasReales;
@@ -30,4 +30,3 @@ $temporada = $json1->temporada;
 $kClaseTela = $json1->kClaseTela;
 $kSalaTejido = $json1->kSalaTejido;
 ?>
-
